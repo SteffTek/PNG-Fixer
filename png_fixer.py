@@ -191,7 +191,7 @@ def parse():
     print(SPLITTER)
 
     # While the PNG has not been completly parsed
-    while offset + 1 != len(content):
+    while offset < len(content):
         content, offset = parse_and_repair_chunk(content, offset)
         print(SPLITTER)
 
